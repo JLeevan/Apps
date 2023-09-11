@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <ImageView
+        android:id="@+id/upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:minHeight="250dp"
+        android:minWidth="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/upload_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_title"
+        android:singleLine="true"
+        android:inputType="textCapSentences|textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/upload_image"
+        app:layout_constraintEnd_toEndOf="@id/upload_image"
+        app:layout_constraintTop_toBottomOf="@id/upload_image"
+        tools:text="Add caption here"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/upload_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_description"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/upload_caption"
+        app:layout_constraintStart_toStartOf="@id/upload_caption"
+        app:layout_constraintTop_toBottomOf="@id/upload_caption"
+        tools:text="Add description" />
+
+    <Button
+        android:id="@+id/upload_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="@string/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_description"
+        tools:ignore="TextViewEdits" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
